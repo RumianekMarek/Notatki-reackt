@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Column.scss';
 import Card from '../Card/Card';
 import { settings } from '../../data/dataStore';
+import Creator from '../Creator/Creator';
 
 class Column extends React.Component {
   state = {
@@ -42,6 +43,9 @@ class Column extends React.Component {
           {this.state.cards.map(({key, ...cardsProps}) =>(
             <Card key={key} {...cardsProps} />
           ))}
+        </div>
+        <div className={styles.creator}>
+          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
         </div>
       </section>
     )
