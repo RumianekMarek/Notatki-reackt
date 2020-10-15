@@ -7,6 +7,7 @@ class Hero extends React.Component {
   static propTypes = {
     title: PropTypes.node,
     children: PropTypes.node,
+    titleImage: PropTypes.string,
   }
   
   render() {
@@ -15,11 +16,11 @@ class Hero extends React.Component {
         <h2 className={styles.title}>{ReactHtmlParser(this.props.titleText)}</h2>     
         <img className={styles.image} src={this.props.titleImage}></img>
       </header >
-    )
+    );
   }
 }
 
 Hero.propTypes = {
   titleText: PropTypes.node,
-}
+};
 export default Hero;
