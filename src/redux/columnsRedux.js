@@ -17,7 +17,6 @@ export const createActionAddColumn = payload => ({ payload: { ...payload, id: sh
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_COLUMN:
-      console.log(state);
       return [...state, action.payload];
     default:
       return state;

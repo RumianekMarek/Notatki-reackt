@@ -4,7 +4,7 @@ import styles from './Column.scss';
 import Card from '../Card/Card';
 import { settings } from '../../data/dataStore';
 import Creator from '../Creator/Creator';
-import Icon from '../../data/Icon';
+import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
   static propTypes = {
@@ -22,10 +22,9 @@ class Column extends React.Component {
 
   render() {
     const {title, icon, cards, addCard} = this.props;
-    console.log(this.props);
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}><span className={styles.icon}>{Icon(icon)}</span>{title}</h3>
+        <h3 className={styles.title}><span className={styles.icon}><Icon name={icon} /></span>{title}</h3>
         
         <div>
           {cards.map(cardData => (
