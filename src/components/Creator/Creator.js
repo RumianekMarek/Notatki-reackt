@@ -27,6 +27,7 @@ class Creator extends React.Component {
   }
 
   handleOK = () => {
+    console.log(this.props.action);
     if(this.state.value != ''){
       this.props.action(this.state.value);
       this.setState({

@@ -13,6 +13,7 @@ export const createActionAddCard = payload => ({ payload: { ...payload, id: shor
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_CARD:
+      console.log(state);
       return [...state, action.payload];
     default:
       return state;
