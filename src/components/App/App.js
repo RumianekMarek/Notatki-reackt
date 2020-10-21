@@ -1,17 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Container from '../Container/Container';
+import Home from '../Home/HomeContainer';
+import{BrowserRouter, Switch, Route} from 'react-router-dom';
+import Info from '../Info/Info';
+import MainLayout from '../MainLayout/MainLayout';
+import Faq from '../Faq/Faq';
 
-class App extends React.Component {
-  static propTypes = {
-    lists: PropTypes.array,
-  }
+const App = () => (
+  <BrowserRouter>
+    <MainLayout>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/faq' component={Faq} />
+      </Switch>
+    </MainLayout>
+  </BrowserRouter>
+);
 
-  render() {
-    const {lists} = this.props;
-    return (
-      <Container lists={lists}/>
-    );
-  }
-}
 export default App;

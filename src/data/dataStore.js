@@ -10,6 +10,9 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  header: {
+    icon: 'clipboard-list',
+  },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -141,11 +144,28 @@ const cards = [
   },
 ];
 
+const info = [
+  {
+    title: 'Info',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
+
+const faq = [
+  {
+    image: 'https://i.postimg.cc/Cxcs4m68/faq.jpg',
+    content: 'Integer sit amet tempor ipsum. Donec ac posuere dolor. Sed consectetur eros sed mollis iaculis. Sed aliquam quam nec magna sollicitudin, vel viverra neque aliquam. Nulla fermentum odio in velit egestas commodo. Pellentesque turpis magna, ultricies convallis urna at, sagittis convallis massa. Mauris ultrices vitae libero nec finibus. Suspendisse non.',
+    title: 'FREQUENTLY ASK QUESTIONS',
+  },
+];
+
 const initialStoreData = {
   app: {...pageContents},
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
+  info: [...info],
+  faq: [...faq],
 };
 
 export default initialStoreData;
