@@ -4,7 +4,7 @@ import {NavLink, Link} from 'react-router-dom';
 import style from './Header.scss';
 import Container from'../Container/Container';
 import Icon from '../Icon/Icon';
-import Search from '../search/SearchContainer';
+import Search from '../Search/SearchContainer';
 
 class Header extends React.Component{
 
