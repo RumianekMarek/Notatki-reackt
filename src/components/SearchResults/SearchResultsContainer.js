@@ -11,7 +11,7 @@ import {
 const mapStateToProps = (state, props) => {
   return {
     cards: getCardsForSearch(state, props.id),
-    searchString: console.log(getSearchString(state)),
+    searchString: getSearchString(state),
     countVisible: countVisibleCards(state),
     countAll: countAllCards(state),
   };

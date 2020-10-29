@@ -16,7 +16,7 @@ export const CHANGE = createActionName('CHANGE');
 export const createAction_changeSearchString = payload => ({payload, type:CHANGE});
 
 // reducer
-export default function reducer(statePart = '', action = {}) {
+export default function reducer(statePart = {}, action = {}) {
   switch (action.type) {
     case CHANGE:      
       return action.payload;
