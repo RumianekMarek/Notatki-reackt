@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SearchResults.scss';
+import styles from './SearchResults.scss' ;
 import Card from '../Card/Card';
 
 class SearchResults extends React.Component {
