@@ -48,7 +48,6 @@ class Search extends React.Component {
     const {text, countVisible, countAll} = this.props;
     const {value} = this.state;
     const {icon} = settings.search;
-    if (localStorage.searchString != undefined) this.props.changeSearchString(localStorage.searchString);
     return (
       <Container >
         <input

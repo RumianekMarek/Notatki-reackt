@@ -7,6 +7,8 @@ export const countAllCards = ({cards}) => cards.length;
 // action name creator
 const reducerName = 'search';
 
+const initialState =  (localStorage.searchString != undefined) ? this.props.changeSearchString(localStorage.searchString) : '';
+
 // actions types
 const createActionName = name => `app/${reducerName}/${name}`;
 
@@ -16,7 +18,7 @@ export const CHANGE = createActionName('CHANGE');
 export const createAction_changeSearchString = payload => ({payload, type:CHANGE});
 
 // reducer
-export default function reducer(statePart = {}, action = {}) {
+export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
     case CHANGE:      
       return action.payload;
